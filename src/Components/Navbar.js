@@ -47,7 +47,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <div>
-                <h1>The Current Count is: {this.state.count}</h1>
+                <h1>The Current Class Component Count is: {this.state.count}</h1>
                 <button onClick={this.counterDown}>-</button>
                 <button onClick={this.counterUp}>+</button>
                 <button onClick={this.counterReset}>Reset</button>

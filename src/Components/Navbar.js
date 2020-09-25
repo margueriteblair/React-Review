@@ -12,30 +12,45 @@ export default class Navbar extends Component {
         this.counterDown = this.counterDown.bind(this)
         this.counterReset = this.counterReset.bind(this)
 
-        counterUp() {
-            this.setState((prevState) => {
-                return {
-                    ...prevState,
-                    count: prevState.count + 1
-                }
-            })
-        }
 
-        counterDown() {
-            this.state.count = this.state.count - 1
+    //     counterDown() {
+    //         this.state.count = this.state.count - 1
 
-        }
+    //     }
 
-        this.counterReset() {
-            this.state.count = 0
-        }
+    //     this.counterReset() {
+    //         this.state.count = 0
+    //     }
     }
+    counterUp() {
+        this.setState((prevState) => {
+            return {
+                count: prevState.count + 1
+            }
+        })
+    }
+    counterDown() {
+        this.setState((prevState) => {
+            return {
+                count: prevState.count - 1
+            }
+        })
+    }
+    counterReset() {
+        this.setState((prevState) => {
+            return {
+                count: 0
+            }
+        })
+    }
+
     render() {
         return (
             <div>
                 <button onClick={this.counterDown}>-</button>
                 {this.state.count}
                 <button onClick={this.counterUp}>+</button>
+                <button onClick={this.counterReset}>Reset</button>
 
             </div>
         )
